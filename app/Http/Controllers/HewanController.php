@@ -9,6 +9,10 @@ class HewanController extends Controller
 {
     //
     public function index(){
+        //menentukan judul halaman
+        $title = 'Data Hewan';
+        $hewan = Hewan::all();
+        return view('hewan.index', compact('title', 'hewan'));
 
     }
 
@@ -29,7 +33,7 @@ class HewanController extends Controller
     }
 
     public function destroy(Hewan $hewan){
-        
+
     }
 
 
