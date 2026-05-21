@@ -50,6 +50,10 @@ class HewanController extends Controller
     }
 
     public function destroy(Hewan $hewan){
+        //menghapus data karyawan yang dipilih
+        $hewan->delete();
+        //redirect ke halaman index dengan pesan sukses
+        return redirect()->route('hewan.index')->with('success','Data Hewan berhasil dihapus.');
 
     }
 

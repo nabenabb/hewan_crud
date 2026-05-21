@@ -22,6 +22,10 @@
         <td>{{ $data->keadaan }}</td>
         <td>
             <a href="#">Edit</a>
+            <form action="{{ route('hewan.destroy', $data->id) }}"
+                  method="POST" style="display: inline;">
+            @csrf
+            @method('DELETE')
             <button type="submit' onclick="return confirm('Hapus Hewan Ini?')">Hapus</button>
         </td>
     </tr>
